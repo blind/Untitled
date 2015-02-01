@@ -24,3 +24,16 @@ echo
 
 echo
 echo
+
+
+
+
+#
+# Build Atari ST
+#
+echo
+echo
+echo
+echo "=======> Building Atari ST"
+echo
+../bin/osx/vasmm68k_mot -Ftos -o out/untitled.prg atarist.asm -m68000 -I"/Users/magnusrunesson/Projects/Amiga/NDK_3.9/Include/include_i" -I"../src/"
