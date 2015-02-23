@@ -39,3 +39,23 @@ rendLoadSprite:
 	rts
 
 
+rendLoadPalette:
+	rts
+
+rendLoadTileBank:
+	rts
+
+rendLoadTileMap:
+	rts
+
+rendSetSpriteFrame:
+	rts
+
+rendLoadTileMap:
+	rts
+
+rendSetSpritePosition:
+	rts
+
+rendSetSpriteDrawOrder:
+	rts
