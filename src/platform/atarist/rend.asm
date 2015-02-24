@@ -6,10 +6,18 @@
 ;==============================================================================
 
 rendWaitVSync:
+	move.w	#1,vblFlag
+
+.wait_loop
+	tst.w	vblFlag
+	bne.s	.wait_loop
+
 	rts
 
 
-
+_vblHandler:
+	clr.w	vblFlag
+	rts
 ;==============================================================================
 ;
 ; Set scroll position for both horizontal scroll (X) and vertical scroll (Y)
@@ -45,9 +53,6 @@ rendLoadPalette:
 rendLoadTileBank:
 	rts
 
-rendLoadTileMap:
-	rts
-
 rendSetSpriteFrame:
 	rts
 
@@ -59,3 +64,9 @@ rendSetSpritePosition:
 
 rendSetSpriteDrawOrder:
 	rts
+
+
+	section bss
+vblFlag
+	ds.w	1
+	section CODE
